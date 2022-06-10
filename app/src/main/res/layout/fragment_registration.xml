@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/etName"
+            style="@style/Theme.QuwiTest.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size_44"
+            android:ems="10"
+            android:hint="@string/name"
+            android:inputType="textEmailAddress"
+            app:layout_constraintVertical_bias="0.4"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/etEmail" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            style="@style/Theme.QuwiTest.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size_44"
+            android:layout_marginTop="@dimen/size_16"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toBottomOf="@+id/etName"
+            app:layout_constraintBottom_toTopOf="@+id/etPassword" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            style="@style/Theme.QuwiTest.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size_44"
+            android:layout_marginTop="@dimen/size_16"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail"
+            app:layout_constraintBottom_toTopOf="@+id/bntCreateAccount" />
+
+        <Button
+            android:id="@+id/bntCreateAccount"
+            style="@style/Theme.QuwiTest.MaterialButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size_44"
+            android:layout_marginTop="@dimen/size_38"
+            android:text="@string/create_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

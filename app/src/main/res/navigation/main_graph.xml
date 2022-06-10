@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/welcomeFragment">
+
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.android.quwitest.screen.login.LoginFragment"
+        tools:layout="@layout/fragment_login"
+        android:label="AuthFragment" >
+        <action
+            android:id="@+id/action_authFragment_to_chatListFragment"
+            app:destination="@id/chatListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.android.quwitest.screen.chat.ChatListFragment"
+        tools:layout="@layout/fragment_chats"
+        android:label="ChatListFragment" />
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.android.quwitest.screen.registration.RegistrationFragment"
+        tools:layout="@layout/fragment_registration"
+        android:label="RegistrationFragment" >
+        <action
+            android:id="@+id/action_registrationFragment_to_authFragment"
+            app:popUpToInclusive="false"
+            app:destination="@id/authFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.android.quwitest.screen.home.HomeFragment"
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+</navigation>

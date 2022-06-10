@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">QuwiTest</string>
+
+    <string name="create_account">Create Account</string>
+    <string name="registration">Registration</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="messages">Messages</string>
+
+    <string name="not_valid_name">Your name is too short</string>
+    <string name="not_valid_email">Pls put your email</string>
+    <string name="not_valid_password">Your password is too short</string>
+
+</resources>
